@@ -62,13 +62,14 @@
         alert("전화번호")
       else{
         let nums= $('#input-phone').val().split('-');
-        console.log(nums)
+        console.log(nums);
+        console.log(nums[2].length);
         if(nums.length!==3)
           alert("전화번호형식")
         else if(nums[0]=='010'
-        && int(nums[1])<=9999&&int(nums[1])>=0
-        && int(nums[2])<=9999&&int(nums[2])>=0) 
-          console.log(nums[0])
+        && Number(nums[1])<=9999&&Number(nums[1])>=0&&nums[1].length==4
+        && Number(nums[2])<=9999&&Number(nums[2])>=0&&nums[2].length==4) 
+          alert("ok");
         else{
           alert("전화번호형식");
         }
