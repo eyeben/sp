@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -24,11 +25,18 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.3주차파">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\impjt\Desktop\sparta on laptop\서버연습" />
+      <recent name="C:\Users\impjt\Desktop\sparta on laptop\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.4주차과제">
     <configuration name="3주차파" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="sparta on laptop" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -42,6 +50,132 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3주차파.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="4주차몽고" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sparta on laptop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4주차몽고.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="4주차과제" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sparta on laptop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4주차서버과제" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4주차서버과제/4주차과제.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="4주차섭" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sparta on laptop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/서버연습" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/서버연습/4주차섭.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="4주차섭" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sparta on laptop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/서버연습" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/서버연습/4주차섭.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="4주차섭" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sparta on laptop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/서버연습" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/서버연습/4주차섭.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="4주차섭" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sparta on laptop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4주차섭.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -73,6 +207,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.4주차과제" />
+        <item itemvalue="Python.4주차몽고" />
         <item itemvalue="Python.3주차파" />
         <item itemvalue="Python.Days_of_code" />
       </list>
@@ -91,31 +227,42 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="244" y="173" key="FileChooserDialogImpl" timestamp="1585295365884">
+    <state x="110" y="94" key="#Notifications" timestamp="1585825637634">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="244" y="173" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585295365884" />
-    <state width="636" height="215" key="GridCell.Tab.0.bottom" timestamp="1585575269958">
+    <state x="110" y="94" key="#Notifications/0.0.1536.864@0.0.1536.864" timestamp="1585825637634" />
+    <state x="0" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585774032137">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="636" height="215" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585575269958" />
-    <state width="636" height="215" key="GridCell.Tab.0.center" timestamp="1585575269953">
+    <state x="0" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1585774032137" />
+    <state x="244" y="173" key="FileChooserDialogImpl" timestamp="1586219873305">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="636" height="215" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1585575269953" />
-    <state width="636" height="215" key="GridCell.Tab.0.left" timestamp="1585575269953">
+    <state x="244" y="173" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586219873305" />
+    <state width="682" height="220" key="GridCell.Tab.0.bottom" timestamp="1586225922153">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="636" height="215" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1585575269953" />
-    <state width="636" height="215" key="GridCell.Tab.0.right" timestamp="1585575269953">
+    <state width="682" height="220" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586225922153" />
+    <state width="682" height="220" key="GridCell.Tab.0.center" timestamp="1586225922153">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="636" height="215" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585575269953" />
-    <state x="65" y="68" key="SettingsEditor" timestamp="1585295321802">
+    <state width="682" height="220" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586225922153" />
+    <state width="682" height="220" key="GridCell.Tab.0.left" timestamp="1586225922152">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="65" y="68" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1585295321802" />
+    <state width="682" height="220" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586225922152" />
+    <state width="682" height="220" key="GridCell.Tab.0.right" timestamp="1586225922153">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="682" height="220" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586225922153" />
+    <state x="65" y="68" key="SettingsEditor" timestamp="1585786883957">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="65" y="68" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1585786883957" />
     <state x="459" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1585299665285">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
