@@ -8,6 +8,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 songs=soup.select('#body-content > div.newest-list > div > table > tbody>tr')
 cnt=1
 for song in songs:
+	print('[', song, ']')
 	a_title=song.select_one('td.info > a.title.ellipsis')
 	a_artist=song.select_one('td.info > a.artist.ellipsis')
 	if a_title is not None:

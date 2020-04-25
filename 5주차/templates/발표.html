@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+
+
+
+  <style>
+    .wrap {
+      width: 600px;
+      margin: auto;
+
+    }
+
+    .top-card {
+
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      z-index: 100;
+    }
+
+    .top-btn1,
+    .top-btn2,
+    .dropdown-toggle {
+      min-width: 90px;
+    }
+
+    .top-btn1 {
+      position: absolute;
+      left: 70px;
+    }
+
+    .top-btn3 {
+      position: absolute;
+      right: 70px;
+    }
+
+    /* 여기까지윗부분 */
+    .main {
+      margin-top: 100px;
+
+    }
+
+    .register {
+      position: fixed;
+      min-width: 600px;
+      top: 50%;
+      display: none;
+    }
+
+    .close {
+      display: none;
+    }
+  </style>
+
+
+  <script>
+    function del() {
+      if ($('#close').css('display') == 'block')
+        $('#close').hide();
+      else
+        $('#close').show();
+    }
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+
+
+
+
+
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="card top-card text-center top">
+      <div class="card-body">
+        <button type="button" class="btn btn-outline-primary top-btn1" id="fold-folders">폴더접기</button>
+
+        <button type="button" class="btn btn-outline-primary top-btn2" id="reset">알림리셋</button>
+
+        <div class="dropdown btn-group top-btn3">
+          <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton modify"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            편집
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModalCenter" href="#">추가</a>
+            <a class="dropdown-item" onclick="del()" href="#">삭제</a>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="main text-center">
+      <p></p>
+      <p></p>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">사이트 추가</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+      <p>
+        <button type="button" class="btn btn-outline-primary "><span class="badge badge-info">9</span>
+          11111111111111111111111</button>
+
+        <button type="button" class="close" id="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </p>
+      <button type="button" class="btn btn-outline-primary ">11111111111111111111111</button>
+
+      <p></p>
+      <button type="button" class="btn btn-outline-primary ">11111111111111111111111</button>
+
+
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

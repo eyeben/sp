@@ -36,30 +36,73 @@
         // index.html 로드가 완료되면 자동으로 show_star() 함수를 호출합니다.
         show_star();
       });
-
+      function make_card(img_url,like,name,recent,url){
+        temp=`<div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img
+                  src="${img_url}"
+                  alt="Placeholder image"
+                />
+              </figure>
+            </div>
+            <div class="media-content">
+              <a href="#" target="_blank" class="star-name title is-4">${name} (좋아요: ${like})</a>
+              <p class="subtitle is-6">${recent}</p>
+            </div>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a href="#" onclick="like_star('${name}')" class="card-footer-item has-text-info">
+            위로!
+            <span class="icon">
+              <i class="fas fa-thumbs-up"></i>
+            </span>
+          </a>
+          <a href="#" onclick="delete_star('${name}')" class="card-footer-item has-text-danger">
+            삭제
+            <span class="icon">
+              <i class="fas fa-ban"></i>
+            </span>
+          </a>
+        </footer>
+      </div>`
+      $('#star-box').append(temp);
+      }
       function show_star(){
+        $('#star-box').empty();
+
 			  $.ajax({
 			      type: 'GET',
-			      url:  '/api/list',
+			      url:  'http://localhost:5000/api/list',
 			      data: {},
 			      success: function (response) {
 							if (response['result'] == 'success') {
-								let msg = response['msg'];
-								alert(msg);
+
+                let stars=response['msg'];
+                console.log(stars);
+                for(let elem of stars){
+                  let {like,img_url,name,recent,url}=elem;
+                  make_card(img_url,like,name,recent,url);
+                }
+								
 							}
 			      }
 			  });
 			}
-
+			
       function like_star(name){
           $.ajax({
               type: 'POST',
-              url:  '/api/like',
-              data: {},
+              url:  'http://localhost:5000/api/like',
+              data: {'name_give':name},
               success: function (response) {
                   if (response['result'] == 'success') {
 										let msg = response['msg'];
-										alert(msg);
+                    alert(msg);
+                    window.location.reload();
                   }
               }
           });
@@ -68,12 +111,14 @@
       function delete_star(name){
           $.ajax({
               type: 'POST',
-              url:  '/api/delete',
-              data: {},
+              url:  'http://localhost:5000/api/delete',
+              data: {'name_give':name},
               success: function (response) {
                   if (response['result'] == 'success') {
 										let msg = response['msg'];
+                    console.log(msg);
 										alert(msg);
+                    window.location.reload();
                   }
               }
           });
