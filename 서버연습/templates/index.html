@@ -1,132 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>프론트-백엔드 연결 마지막 예제!</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
-    />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-    ></script>
-    <style>
-      .make-center {
-        text-align: center;
-      }
-      .star-list {
-        width: 500px;
-        margin: 20px auto 0 auto;
-      }
-      .star-name {
-          display: inline-block;
-      }
-      .star-name:hover {
-          text-decoration: underline;
-      }
-      .card {
-          margin-bottom: 15px;
-      }
-    </style>
-    <script>
-      $(document).ready(function() {
-        // index.html 로드가 완료되면 자동으로 show_star() 함수를 호출합니다.
-        show_star();
-      });
 
-      function show_star(){
-			  $.ajax({
-			      type: 'GET',
-			      url:  '/api/list',
-			      data: {},
-			      success: function (response) {
-							if (response['result'] == 'success') {
-								let msg = response['msg'];
-								alert(msg);
-							}
-			      }
-			  });
-			}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      function like_star(name){
-          $.ajax({
-              type: 'POST',
-              url:  '/api/like',
-              data: {},
-              success: function (response) {
-                  if (response['result'] == 'success') {
-										let msg = response['msg'];
-										alert(msg);
-                  }
-              }
-          });
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+
+
+
+  <style>
+    .wrap {
+      width: 600px;
+      margin: auto;
+
+
+    }
+
+    .top-card {
+
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      z-index: 100;
+    }
+
+    .top-btn1,
+    .top-btn2,
+    .top-btn3,
+    .top-btn4,
+    .dropdown-toggle {
+      min-width: 90px;
+    }
+
+    .top-btn1 {
+      position: absolute;
+      left: 70px;
+    }
+
+    .top-btn3 {
+      position: absolute;
+      right: 70px;
+    }
+
+    .top-btn4 {
+      position: absolute;
+      right: 70px;
+      display: none;
+      z-index: 101;
+    }
+
+    /* 여기까지윗부분 */
+    .main {
+      margin-top: 100px;
+
+    }
+
+
+    .close {
+      display: none;
+    }
+
+    .list-group-item.active {
+      z-index: 2;
+      color: black;
+      background-color: #e9ecef;
+      border-color: #ced4da;
+    }
+  </style>
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    function del() {
+      if ($('#close').css('display') == 'block') {
+
+        let x= document.getElementsByClassName('close');
+        for(i=0;i<x.length;i++)
+          x[i].style.display='none';
+        $('#done').hide();
+      }
+      else {
+        let x= document.getElementsByClassName('close');
+        for(i=0;i<x.length;i++)
+          x[i].style.display='block';
+        $('#done').show();
+      }
+    }
+    function empty_form() {
+      $('#title').val('');
+      $('#url').val('');
+      $('#mentions-keyword').val('');
+      $('#mentions-range').val('');
+      $('#changes-range').val('');
+    }
+    function remove_chunk(title){
+      let tmp='#chunk'+title;
+      $(tmp).remove();
+      $.ajax({
+        type:"DELETE",
+        url:"http://localhost:5000/data",
+        data:{title_give:title},
+        success: function (response){
+          if (response['result'] == 'success') {
+            }
+        }
+      })
+    }
+
+
+    function alarm_reset(){
+      let x= document.getElementsByClassName('badge');
+      let t=x.length;
+      console.log(t);
+      for(i=0;i<t;i++){
+        $('#badge').remove();
+      }
+    }
+
+
+    function write_data() {
+      let input_form = 'n', input_title = $('#title').val(), input_url = $('#url').val(), input_keyword = $('#mentions-keyword').val(), input_range = $('#changes-range').val();
+      if (input_title === '') {
+        $('#title').focus()
+      }
+      else if (input_url === '') {
+        $('#url').focus()
+      }
+      else if ($('#mentions').hasClass('active') && input_keyword === '') {
+        $('#mentions-keyword').focus()
+      }
+      else if ($('#changes').hasClass('active') && input_range === '') {
+        $('#changes-range').focus()
+      }
+      else {
+        if ($('#mentions').hasClass('active')) {
+          input_form = 'm', input_range = $('#mentions-range').val();
+        }
+        else {
+          input_form = 'c', input_keyword = '';
+        }
+        console.log(input_form)
+        console.log(input_title)
+        console.log(input_url)
+        console.log(input_keyword)
+        console.log(input_range)
+
+
+
+        $.ajax({
+          type: "POST",
+          url: "http://localhost:5000/data",
+          data: { give_form: input_form, give_title: input_title, give_url: input_url, give_keyword: input_keyword, give_range: input_range },
+          success: function (response) {
+            if (response['result'] == 'success')
+              console.log('post success')
+            window.location.reload();
+          }
+        })
+
+
+
       }
 
-      function delete_star(name){
-          $.ajax({
-              type: 'POST',
-              url:  '/api/delete',
-              data: {},
-              success: function (response) {
-                  if (response['result'] == 'success') {
-										let msg = response['msg'];
-										alert(msg);
-                  }
-              }
-          });
-      }
+    }
 
-    </script>
-  </head>
-  <body>
-    <section class="hero is-warning">
-      <div class="hero-body">
-        <div class="container make-center">
-          <h1 class="title">
-            마이 페이보릿 무비스타😆
-          </h1>
-          <h2 class="subtitle">
-            순위를 매겨봅시다
-          </h2>
+    $(document).ready(function () {
+      $('#post_here').html('');
+      recieve_data();
+    })
+
+    function make_chunks(form, title, url, keyword, range) {
+      let temp = `<div id="chunk${title}">
+          <a role="button" class="btn btn-outline-primary btns" href="${url}"><span id="badge" class="badge badge-pill badge-primary">!</span>
+            ${title}</a>
+          <button type="button" class="close" id="close" style="display: none;" aria-label="Close" onclick="remove_chunk('${title}')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <p></p>
+        </div>`;
+      $('#post_here').append(temp);
+    }
+
+    function recieve_data() {
+      $.ajax({
+        type: "GET",
+        url: "http://localhost:5000/data",
+        data: {},
+        success: function (response) {
+          if (response['result'] == 'success') {
+            const datas = response['msg'];
+            for (const elem of datas) {
+              let {form, title, url, keyword, range } = elem;
+              console.log(title);
+              make_chunks(form, title, url, keyword, range);
+            }
+          }
+        }
+      })
+    }
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+
+
+
+
+
+</head>
+
+<body>
+
+  <div class="wrap">
+
+
+    <!-- top bar -->
+    <div class="card top-card text-center top">
+      <div class="card-body">
+        <button type="button" class="btn btn-outline-primary top-btn1" id="fold-folders">갱신</button>
+
+        <button type="button" class="btn btn-outline-primary top-btn2" onclick="alarm_reset()" id="reset">알림리셋</button>
+
+        <button type="button" class="btn btn-success top-btn4" onclick="del()" id="done">완료</button>
+
+        <div class="dropdown btn-group top-btn3">
+          <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton modify"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            편집
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModalCenter" onclick="empty_form()"
+              href="#">추가</a>
+            <a class="dropdown-item" onclick="del()" href="#">삭제</a>
+
+          </div>
         </div>
+
       </div>
-    </section>
-    <div class="star-list" id="star-box">
-      <div class="card">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-48x48">
-                <img
-                  src="https://search.pstatic.net/common/?src=https%3A%2F%2Fssl.pstatic.net%2Fsstatic%2Fpeople%2Fportrait%2F201807%2F20180731143610623-6213324.jpg&type=u120_150&quality=95"
-                  alt="Placeholder image"
-                />
-              </figure>
+    </div>
+
+    <div class="main text-center">
+      <p></p>
+      <p></p>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">사이트 추가</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <div class="media-content">
-              <a href="#" target="_blank" class="star-name title is-4">김다미 (좋아요: 3)</a>
-              <p class="subtitle is-6">안녕, 나의 소울메이트(가제)</p>
+            <div class="modal-body">
+
+              <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">제목</span>
+                </div>
+                <input type="text" id="title" class="form-control" placeholder="표시될 제목" aria-label="제목"
+                  aria-describedby="addon-wrapping">
+              </div>
+              <p></p>
+
+              <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">URL</span>
+                </div>
+                <input type="text" class="form-control" id="url" placeholder="사이트 주소" aria-label="주소"
+                  aria-describedby="addon-wrapping">
+              </div>
+              <p></p>
+
+
+              <div class="row">
+                <div class="col-4">
+                  <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="mentions" data-toggle="list"
+                      href="#list-mentions" role="tab" aria-controls="home">단어 언급</a>
+                    <a class="list-group-item list-group-item-action" id="changes" data-toggle="list"
+                      href="#list-changes" role="tab" aria-controls="profile">변화 감지</a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-mentions" role="tabpanel"
+                      aria-labelledby="list-mentions">
+                      <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" id="mentions-keyword" placeholder="언급 되는 단어"
+                          aria-label="keyword" aria-describedby="addon-wrapping">
+                      </div>
+                      <p></p>
+
+                      <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" id="mentions-range" placeholder="범위 지정 (미입력시 전체)"
+                          aria-label="range" aria-describedby="addon-wrapping">
+                      </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="list-changes" role="tabpanel" aria-labelledby="list-changes">
+                      <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" id="changes-range" placeholder="범위 지정"
+                          aria-label="Username" aria-describedby="addon-wrapping">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+              <button type="button" class="btn btn-primary" onclick="write_data()">저장</button>
             </div>
           </div>
         </div>
-        <footer class="card-footer">
-          <a href="#" onclick="like_star('김다미')" class="card-footer-item has-text-info">
-            위로!
-            <span class="icon">
-              <i class="fas fa-thumbs-up"></i>
-            </span>
-          </a>
-          <a href="#" onclick="delete_star('김다미')" class="card-footer-item has-text-danger">
-            삭제
-            <span class="icon">
-              <i class="fas fa-ban"></i>
-            </span>
-          </a>
-        </footer>
       </div>
+
+
+      <!-- main -->
+      <div id="post_here">
+        <div class="chunk"></div>
+      </div>
+
     </div>
-  </body>
+
+  </div>
+
+</body>
+
 </html>

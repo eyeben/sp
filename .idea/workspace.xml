@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f3da2661-22fb-48cd-abe5-165ac6934e37" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3주차파.py" beforeDir="false" afterPath="$PROJECT_DIR$/3주차파.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/복불.py" beforeDir="false" afterPath="$PROJECT_DIR$/복불.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/서버연습/4주차섭.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/서버연습/static/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/서버연습/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/서버연습/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +42,8 @@
       <recent name="C:\Users\impjt\Desktop\sparta on laptop\static" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app (1)">
-    <configuration name="복불" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.프젝크롤링연습">
+    <configuration name="프젝크롤링연습" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sparta on laptop" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -75,27 +77,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3주차파.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="4주차과제" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="sparta on laptop" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4주차서버과제" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4주차서버과제/4주차과제.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -209,6 +190,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="app (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sparta on laptop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/서버연습" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/서버연습/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="sparta on laptop" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -230,34 +232,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="meta_prac" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="sparta on laptop" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/meta_prac.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.프젝크롤링연습" />
+        <item itemvalue="Python.app (2)" />
         <item itemvalue="Python.app (1)" />
         <item itemvalue="Python.3주차파" />
         <item itemvalue="Python.app" />
-        <item itemvalue="Python.복불" />
-        <item itemvalue="Python.meta_prac" />
       </list>
     </recent_temporary>
   </component>
@@ -286,26 +267,30 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="0" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1585774032137" />
+    <state x="489" y="63" key="#복불" timestamp="1588077170031">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="489" y="63" key="#복불/0.0.1536.864@0.0.1536.864" timestamp="1588077170031" />
     <state x="244" y="173" key="FileChooserDialogImpl" timestamp="1586219873305">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="244" y="173" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586219873305" />
-    <state width="1381" height="219" key="GridCell.Tab.0.bottom" timestamp="1587471059260">
+    <state width="1383" height="219" key="GridCell.Tab.0.bottom" timestamp="1588152711631">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1381" height="219" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587471059260" />
-    <state width="1381" height="219" key="GridCell.Tab.0.center" timestamp="1587471059260">
+    <state width="1383" height="219" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588152711631" />
+    <state width="1383" height="219" key="GridCell.Tab.0.center" timestamp="1588152711631">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1381" height="219" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587471059260" />
-    <state width="1381" height="219" key="GridCell.Tab.0.left" timestamp="1587471059260">
+    <state width="1383" height="219" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588152711631" />
+    <state width="1383" height="219" key="GridCell.Tab.0.left" timestamp="1588152711631">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1381" height="219" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587471059260" />
-    <state width="1381" height="219" key="GridCell.Tab.0.right" timestamp="1587471059260">
+    <state width="1383" height="219" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588152711631" />
+    <state width="1383" height="219" key="GridCell.Tab.0.right" timestamp="1588152711631">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1381" height="219" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587471059260" />
+    <state width="1383" height="219" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588152711631" />
     <state x="65" y="68" key="SettingsEditor" timestamp="1585786883957">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
